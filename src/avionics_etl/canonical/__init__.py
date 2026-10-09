@@ -1,0 +1,1 @@
+"""Source-agnostic data model."""

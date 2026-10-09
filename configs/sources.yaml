@@ -1,0 +1,24 @@
+# Source metadata for the warehouse's dim_source table (avionics_etl.load.warehouse).
+# Reconstructed: the original file was missing. Every value is taken from data/readme.txt.
+
+sources:
+  FD001:
+    description: "C-MAPSS FD001: 100 train / 100 test trajectories"
+    operating_conditions: 1   # sea level
+    fault_modes: [HPC degradation]
+    simulator: C-MAPSS
+  FD002:
+    description: "C-MAPSS FD002: 260 train / 259 test trajectories"
+    operating_conditions: 6
+    fault_modes: [HPC degradation]
+    simulator: C-MAPSS
+  FD003:
+    description: "C-MAPSS FD003: 100 train / 100 test trajectories"
+    operating_conditions: 1   # sea level
+    fault_modes: [HPC degradation, Fan degradation]
+    simulator: C-MAPSS
+  FD004:
+    description: "C-MAPSS FD004: 248 train / 249 test trajectories"
+    operating_conditions: 6
+    fault_modes: [HPC degradation, Fan degradation]
+    simulator: C-MAPSS

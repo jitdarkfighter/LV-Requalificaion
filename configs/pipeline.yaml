@@ -1,0 +1,47 @@
+# Pipeline configuration for the C-MAPSS ETL (avionics_etl).
+# Reconstructed: the original file was missing. Only keys the code reads are present.
+# Relative paths resolve against the repository root.
+
+paths:
+  source: data            # the C-MAPSS text files
+  raw: build/raw
+  bronze: build/bronze
+  silver: build/silver
+  gold: build/gold
+  quarantine: build/quarantine
+  artifacts: build/artifacts
+
+dataset:
+  subsets: [FD001, FD002, FD003, FD004]
+  splits: [train, test]
+
+labels:
+  rul_clip: 125           # common C-MAPSS convention
+
+ingest:
+  chunk_rows: 500000
+
+split:
+  validation_fraction: 0.2
+  seed: 0
+
+parquet:
+  compression: {bronze: zstd, silver: zstd, gold: zstd}
+  row_group_bytes: 134217728
+  partition_by: [source_id, batch_id]
+  sort_within_partition: [asset_uid, sequence_no]
+
+outliers:
+  zscore_threshold: 4.0
+  iqr_multiplier: 1.5
+  hampel_window: 7
+  hampel_n_sigma: 3.0
+
+features:
+  rolling_windows: [5, 10, 20]
+  rolling_stats: [mean, std, min, max, slope]
+  use_normalised: true
+
+reduce:
+  prune_correlated: false
+  pca: false

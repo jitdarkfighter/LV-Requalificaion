@@ -1,0 +1,132 @@
+# Channel registry for NASA C-MAPSS (FD001-FD004).
+# Reconstructed: the original file was missing. Channel names/roles follow
+# avionics_etl.adapters.cmapss.SOURCE_COLUMNS (3 operational settings, 21 sensors).
+# `observed` is the min/max over all eight data files; `bounds` is `observed`
+# padded by 10% of its span, so nothing in the source data violates it.
+# Physical units are not given in data/readme.txt and are left unset.
+# No max_rate is declared: the source gives no basis for one.
+
+version: 1
+source: cmapss
+
+channels:
+  op_setting_1:
+    role: setting
+    dtype: float32
+    observed: [-0.0087, 42.008]
+    bounds: [-4.21037, 46.2097]
+  op_setting_2:
+    role: setting
+    dtype: float32
+    observed: [-0.0006, 0.842]
+    bounds: [-0.08486, 0.92626]
+  op_setting_3:
+    role: setting
+    dtype: float32
+    observed: [60, 100]
+    bounds: [56, 104]
+  s1:
+    role: sensor
+    dtype: float32
+    observed: [445, 518.67]
+    bounds: [437.633, 526.037]
+  s2:
+    role: sensor
+    dtype: float32
+    observed: [535.41, 645.11]
+    bounds: [524.44, 656.08]
+  s3:
+    role: sensor
+    dtype: float32
+    observed: [1240.94, 1616.91]
+    bounds: [1203.34, 1654.51]
+  s4:
+    role: sensor
+    dtype: float32
+    observed: [1023.77, 1441.49]
+    bounds: [981.998, 1483.26]
+  s5:
+    role: sensor
+    dtype: float32
+    observed: [3.91, 14.62]
+    bounds: [2.839, 15.691]
+  s6:
+    role: sensor
+    dtype: float32
+    observed: [5.66, 21.61]
+    bounds: [4.065, 23.205]
+  s7:
+    role: sensor
+    dtype: float32
+    observed: [136.06, 570.81]
+    bounds: [92.585, 614.285]
+  s8:
+    role: sensor
+    dtype: float32
+    observed: [1914.72, 2388.64]
+    bounds: [1867.33, 2436.03]
+  s9:
+    role: sensor
+    dtype: float32
+    observed: [7984.51, 9244.59]
+    bounds: [7858.5, 9370.6]
+  s10:
+    role: sensor
+    dtype: float32
+    observed: [0.93, 1.32]
+    bounds: [0.891, 1.359]
+  s11:
+    role: sensor
+    dtype: float32
+    observed: [36.03, 48.53]
+    bounds: [34.78, 49.78]
+  s12:
+    role: sensor
+    dtype: float32
+    observed: [128.26, 537.49]
+    bounds: [87.337, 578.413]
+  s13:
+    role: sensor
+    dtype: float32
+    observed: [2027.57, 2390.49]
+    bounds: [1991.28, 2426.78]
+  s14:
+    role: sensor
+    dtype: float32
+    observed: [7845.78, 8293.72]
+    bounds: [7800.99, 8338.51]
+  s15:
+    role: sensor
+    dtype: float32
+    observed: [8.1563, 11.0669]
+    bounds: [7.86524, 11.358]
+  s16:
+    role: sensor
+    dtype: float32
+    observed: [0.02, 0.03]
+    bounds: [0.019, 0.031]
+  s17:
+    role: sensor
+    dtype: float32
+    observed: [302, 400]
+    bounds: [292.2, 409.8]
+  s18:
+    role: sensor
+    dtype: float32
+    observed: [1915, 2388]
+    bounds: [1867.7, 2435.3]
+  s19:
+    role: sensor
+    dtype: float32
+    observed: [84.93, 100]
+    bounds: [83.423, 101.507]
+  s20:
+    role: sensor
+    dtype: float32
+    observed: [10.16, 39.89]
+    bounds: [7.187, 42.863]
+  s21:
+    role: sensor
+    dtype: float32
+    observed: [6.0105, 23.9505]
+    bounds: [4.2165, 25.7445]

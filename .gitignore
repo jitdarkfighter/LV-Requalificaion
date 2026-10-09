@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Pipeline output: rebuilt from data/ by `make all` / `make warehouse`
+build/
+*.duckdb
+*.duckdb.wal
+
+# Local backup snapshot of src/ and docs/
+test.zip
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store

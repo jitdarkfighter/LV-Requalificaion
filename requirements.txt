@@ -1,0 +1,17 @@
+# Packages imported by src/avionics_ad and src/avionics_etl, pinned to the versions
+# the project was verified with (Python 3.13). CPU-only torch:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+torch==2.14.1
+PyYAML==6.0.3
+pyarrow==25.0.1
+duckdb==1.5.5
+streamlit==1.65.0
+altair==6.3.0   # installed with Streamlit
+# tests
+pytest==9.1.1
+# only for avionics_etl/extract/images.py (not used by the demo)
+pillow==12.3.0
